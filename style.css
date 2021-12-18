@@ -1,3 +1,17 @@
 button {
     display: block;
 }
+
+.container div {
+    background-color: pink;
+    border: solid black 1px;
+  
+
+}
+
+.container{
+    display: flex;
+    gap: 0.5em;
+    
+
+}
