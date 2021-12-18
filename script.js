@@ -54,7 +54,7 @@ function displayLibrary(){
         const remove = document.createElement('button')//remove button
         remove.innerHTML = `remove`
         div.appendChild(remove)
-        remove.addEventListener('click',function(){
+        remove.addEventListener('click',function(){//remove a book from library
             div.remove()
             myLibrary = myLibrary.filter(function(el){
               return el.index !== newBook.index 
@@ -64,9 +64,9 @@ function displayLibrary(){
 
         })
 
-        toggle.addEventListener('click', function(){
-            toggle.innerHTML === 'read' ? toggle.innerHTML = 'unread'
-            : toggle.innerHTML = 'read';
+        toggle.addEventListener('click', function(){//toggle button for read/unread
+            toggle.innerHTML === 'read' ? (toggle.innerHTML = 'unread', newBook.status = false)
+            : (toggle.innerHTML = 'read', newBook.status = true);
         })
 
 
@@ -76,15 +76,13 @@ function displayLibrary(){
     
 }
 
-function removeBook(el){
-    el.remove()
 
-}
 
+//create and add a new book to the library
 function addNewBook(){
     form.addEventListener('submit', function(e){
         e.preventDefault()
-        let libraryInd = myLibrary.length < 1 ? 0 : myLibrary.length;
+        let libraryInd = myLibrary.length === 0 ? 0 : myLibrary[myLibrary.length - 1].index + 1;// to use it as index 
         
       
         const newBook = new Book(newTitle.value, newAuthor.value, newPages.value, checkBox.checked, libraryInd)
