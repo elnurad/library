@@ -1,17 +1,89 @@
-button {
-    display: block;
+*{
+    box-sizing: border-box;
+    /* margin: 0; */
+  }
+/* 
+h1{
+    text-align:center;
+} */
+
+body{
+    font-family:
 }
 
-.container div {
+#button {
+   background-color: rgb(96, 170, 235);
+   border-radius: 100px;
+
+}
+
+
+
+.main__container {
+    /* position: absolute;
+   
+    left: 50%;
+    top: 50%;
+    width: 0.2em;
+    height: 0.2em;
+    margin-left: -0.1em; */
+    /* -1/2 width */
+    /* margin-top: -0.2em;
+    -1/2 height */
+    margin: 1.5em 1.5em;
+    /* padding: 10em; */
+
+}
+
+
+.new__book{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    
+}
+.container{
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    /* justify-content: center; */
+    
+
+}
+.innerDiv{
+    /* width: 45%; */
     background-color: pink;
     border: solid black 1px;
-  
 
 }
 
-.container{
-    display: flex;
-    gap: 0.5em;
-    
+@media (min-width:900px) {
+    .new__book{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
+
+@media (min-width:600px) and (max-width:900px) {
+    .new__book{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
 
 }

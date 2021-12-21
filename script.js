@@ -5,13 +5,13 @@ const newAuthor = document.getElementById("author");
 const newPages = document.getElementById("pages");
 const checkBox = document.getElementById("status");
 // 
-
+const mainContainer = document.querySelector(".main__container")
 
 const form = document.querySelector("form");
 
 let container = document.createElement('div')
 
-document.body.appendChild(container)
+mainContainer.appendChild(container)
 
 container.className = "container"
 
@@ -35,7 +35,7 @@ function Book(title, author, pages, status, index) {
 
 function displayLibrary(){
         const newBook = myLibrary[myLibrary.length-1] //last item in the library returns newBook object 
-        const div = document.createElement('div') //create a container for each book
+        const div = document.createElement('div') //create a div for each book
         div.className = 'innerDiv'
         
         const head = document.createElement('h3') //title goes here
