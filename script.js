@@ -1,3 +1,4 @@
+
 let myLibrary = [];
 const button = document.querySelector("#button");
 const newTitle = document.getElementById("title");
@@ -41,17 +42,21 @@ function displayLibrary(){
         const head = document.createElement('h3') //title goes here
         const p = document.createElement('p') //author goes here
         const p_number = document.createElement('p') //number of pages goes here
-        const toggle = document.createElement('button') //read/unread toggle button goes here
+        const toggle = document.createElement('button')
+        toggle.className = "toggle" //read/unread toggle button goes here
         toggle.innerHTML = `${newBook.status === true ? `read` : 'unread'}`
         p_number.innerHTML = `${newBook.pages} pages`;
+        const remove = document.createElement('button')
+        remove.className = "remove" //remove button
         head.innerHTML = newBook.author 
         p.innerHTML = newBook.title
+        
         div.appendChild(head)
         div.appendChild(p)
         div.appendChild(p_number)
         div.appendChild(toggle)
         container.appendChild(div)
-        const remove = document.createElement('button')//remove button
+       
         remove.innerHTML = `remove`
         div.appendChild(remove)
         remove.addEventListener('click',function(){//remove a book from library
