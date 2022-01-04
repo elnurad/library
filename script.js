@@ -19,19 +19,36 @@ container.className = "container"
 
 
 
-//book constructor 
-function Book(title, author, pages, status, index) {
-    this.title = title,
-    this.author = author,
-    this.pages = pages,
-    this.status = status
-    this.index = index 
-  // the constructor...
-    this.info = function() {
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status ? `read` : 'not read yet'}`
+//book class
+
+class Book {
+    constructor(title, author, pages, status, index){
+        this.title = title,
+        this.author = author,
+        this.pages = pages,
+        this.status = status
+        this.index = index 
     }
+        info =()=> {
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status ? `read` : 'not read yet'}`
+    
+    }
+   
 
 }
+
+// function Book(title, author, pages, status, index) {
+//     this.title = title,
+//     this.author = author,
+//     this.pages = pages,
+//     this.status = status
+//     this.index = index 
+//   // the constructor...
+//     this.info = function() {
+//         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status ? `read` : 'not read yet'}`
+//     }
+
+// }
 
 
 function displayLibrary(){
