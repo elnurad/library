@@ -37,19 +37,6 @@ class Book {
 
 }
 
-// function Book(title, author, pages, status, index) {
-//     this.title = title,
-//     this.author = author,
-//     this.pages = pages,
-//     this.status = status
-//     this.index = index 
-//   // the constructor...
-//     this.info = function() {
-//         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status ? `read` : 'not read yet'}`
-//     }
-
-// }
-
 
 function displayLibrary(){
         const newBook = myLibrary[myLibrary.length-1] //last item in the library returns newBook object 
